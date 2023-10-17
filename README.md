@@ -14,3 +14,7 @@
 - Above command will generate two files;
     - usermgmt.pb.go - provides logic for serializing or deserializing the messages.
     - usermgmt_grpc.pb.go - includes generated code for server and client for rpc.
+
+### Connecting two different physical/virtual servers
+- Make sure you can ping servers from each other.
+- Just change the address to `<ipv4 address of server:<server port>>` i.e, `192.168.0.4:5005` in client implementation.
