@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package user_mgmt;
+
+// Define the go package name from go.mod
+option go_package = "github.com/Ume0344/first-grpc-project";
+
+// The user management service definition.
+service UserManagement {
+  rpc CreateUser (NewUser) returns (User) {}
+}
+
+// The request message containing the user's details.
+message NewUser {
+  string name = 1;
+  int32 age = 2;
+}
+
+// The response message containing user's details and a unique ID.
+message User {
+  string name = 1;
+  int32 age = 2;
+  int32 id = 3;
+}
